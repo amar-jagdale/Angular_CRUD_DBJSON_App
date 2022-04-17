@@ -1,0 +1,64 @@
+<!-- <p>add-new-employee works!</p> -->
+<app-container>
+    <div  class="container py-5 h-5">
+        <div class="row d-flex justify-content-center align-items-center h-50" style="margin-top: 5%;">
+                <div style="height: 20%;" class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                    <div  class="card-body p-md-5 mx-md-4">    
+                      <div class="text-center">
+                        <h3> Register New Employee Details </h3>
+                      </div>
+                      <form [formGroup]="formValue">
+                        <div class="form-group">
+                          <label for="firstName">First Name</label>
+                          <input formControlName="firstName"                                             
+                           id="firstName" class="form-control" placeholder="Enter First Name.."  required>
+                          
+                           <span style="color:red" *ngIf="formValue.controls['firstName']?.touched && formValue.controls['firstName'].invalid && !formValue.get('firstName')?.hasError('usernameAlreadyTaken')">First Name is Required</span>
+
+                          <div class="invalid-feeback">
+                            <span style="color:red" *ngIf="formValue.get('firstName')?.hasError('usernameAlreadyTaken')">User Already Exist</span>
+                          </div>               
+                        </div>
+              
+                        <div class="form-group">
+                          <label for="lastName">Last Name</label>
+                          <input id="lastName" formControlName="lastName" type="text" class="form-control"
+                           placeholder="Enter Last Name.." required>
+                            <span style="color:red" *ngIf="formValue.controls['lastName']?.touched && formValue.controls['lastName'].invalid">Lastname Required</span>
+                        </div>
+              
+                        <div class="form-group">
+                          <label for="Email">Email</label>
+                          <input id="Email" type="email" formControlName="Email" class="form-control" placeholder="Enter email.."
+                            required>
+                            <span style="color:red" *ngIf="formValue.controls['Email'].invalid && formValue.controls['Email']?.touched">Email Required</span>
+                        </div>
+              
+                        <div class="form-group">
+                          <label for="Mobile">Mobile Number</label>
+                          <input id="Mobile" type="text" formControlName="Mobile" class="form-control"
+                            placeholder="Enter Mobile Number.." required>
+                            <!-- <span style="color:red" *ngIf="formValue.controls['Mobile']?.touched && formValue.controls['Mobile'].invalid">Mobile Required</span> -->
+                            <span style="color:red" *ngIf="formValue.controls['Mobile']?.touched && formValue.controls['Mobile'].invalid">Mobile Number is required</span>
+                            
+                           </div>
+              
+                        <div class="form-group">
+                          <label for="Salary">Salary</label>
+                          <input id="text" type="text" formControlName="Salary" class="form-control" placeholder="Enter Salary.."
+                            required>
+                            <span style="color:red" *ngIf="formValue.controls['Salary']?.touched && formValue.controls['Salary'].invalid">Salary Required</span>
+                             <br>
+                        </div>         
+                        <!-- <input type="submit" *ngIf="showAdd" (click)="postEmployeeDetails()" class="btn btn-primary mx-2"
+                          value="Save"> -->
+                         <button type="button" (click)="postEmployeeDetails()" class="btn btn-primary mx-2"[disabled]="formValue.invalid">Register</button>
+                         <!-- <button type="button" *ngIf="showUpdate" (click)="updateEmployeeDetails()"
+                         class="btn btn-primary">Update</button>&nbsp; -->
+                         <button type="button" id="cancel" class="btn btn-secondary" routerLink="/auth/employee-dashboard">Close</button>         
+                      </form>
+                    </div>                
+            </div>          
+        </div>
+      </div>
+</app-container>

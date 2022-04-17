@@ -1,0 +1,74 @@
+<div class="jumbotron big-banner">
+    <div class="container"> 
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="card" >
+                    <div class="text-center">
+                        <h3>Login</h3>
+                        <h6>Please Enter Email & Password</h6>
+                        <!-- <i class="fa fa-key icon"></i> -->
+                    </div>
+                    <form class="shadow-lg p-4">                
+                        <form [formGroup]="loginForms" (ngSubmit)="login()">
+                            <!-- <form (ngSubmit)="login(form)" #form="ngForm"> -->
+                              <div class="mb-3">
+                              <label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+                              <!-- <input type="email" class="form-control" name='email' id="email" ngModel required email #email="ngModel"> -->
+                              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <!-- <small *ngIf="loginForms.get('email')?.invalid && loginForms.get('email')?.touched" class="text-danger">Email is Required</small> -->
+                              <span style="color: red;" *ngIf="loginForms.controls['email'].invalid &&loginForms.controls['email']?.touched">Email Required</span> 
+                            </div>                            
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="font-weight-bold">Password</label>
+                              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                              <!-- <input type="password" class="form-control" name='password' id="password" ngModel required password #password="ngModel"> -->
+                              <!-- <small *ngIf="loginForms.get('password')?.invalid && loginForms.get('password')?.touched" class="text-danger">Password is Required</small> -->
+                              <span style="color: red" *ngIf="loginForms.controls['password'].invalid && loginForms.controls['password']?.touched">Password is Required</span>     
+                            </div>
+                            <button type="submit" class="btn btn-outline-success btn-block mt-3 font-weight-bold shadow-sm" [disabled]="loginForms.invalid">Login</button>
+                          </form>
+                         <small><a class="font-weight-bold" style="color: rgb(5, 4, 4);margin-top: 5px;" routerLink="/auth/signup">New User ? Click Here to Sign Up...</a></small>
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- <div class="container vh-50">
+    <div class="row justify-content-center h-50">
+        <div class="card my-auto shadow">
+            <div class="card-body px-2">
+                <div class="text-center">
+                    <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+                </div>
+                <div class="text-center">
+                    <h3>Welcome</h3>
+                </div>
+                <p style="color: rgb(9, 18, 24); text-align: center;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter your login
+                    details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <form [formGroup]="loginForms" (ngSubmit)="login()">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" class="form-control" formControlName="email"
+                            name="email" required/>
+                        <span ></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" placeholder="*******" class="form-control"
+                            formControlName="password" name="password"/>
+
+                    </div>
+                    <input type="submit" class="btn btn-primary w-100" value="Login" name="Login">
+                </form>
+            </div>
+            <div class="card-footer text-right">
+                <small><a style="color: rgb(7, 62, 124);margin-top: 10px;" routerLink="/signup">New User ? Click Here to
+                        Sign Up...</a>
+                </small>
+            </div>
+        </div>
+    </div>
+</div> -->

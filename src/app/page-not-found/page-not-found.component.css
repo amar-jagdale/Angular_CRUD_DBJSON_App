@@ -1,0 +1,8 @@
+/* body { background-image: url('404-page-not-found.jpg');} */
+.error-template {padding: 40px 15px;text-align: center;}
+.container{
+    
+   opacity: 0.9;
+    /* background-image: url('../../assets/Images/404-page-not-found.jpg');     */
+  
+}

@@ -1,0 +1,253 @@
+{
+  "posts": [
+    {
+      "firstName": "Jorge",
+      "lastName": "Thomson",
+      "Email": "jorge@gmail.com",
+      "Mobile": "9315121314",
+      "Salary": "75000",
+      "id": 33
+    },
+    {
+      "id": 36,
+      "firstName": "Jasprit",
+      "lastName": "Boomrah",
+      "Email": "jasprit@gmail.com",
+      "Mobile": "9320301040",
+      "Salary": "41000"
+    },
+    {
+      "id": 39,
+      "firstName": "John",
+      "lastName": "Peter",
+      "Email": "john@yahoo.com",
+      "Mobile": "7432216554",
+      "Salary": "47500"
+    },
+    {
+      "firstName": "Akshay",
+      "lastName": "Chougule",
+      "Email": "akchougule99@gmail.com",
+      "Mobile": "7510506040",
+      "Salary": "45286",
+      "id": 40
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Karan",
+      "Email": "sam@gmail.com",
+      "Mobile": "8865577888",
+      "Salary": "22560",
+      "id": 45
+    },
+    {
+      "id": 46,
+      "firstName": "Khris",
+      "lastName": "Moris",
+      "Email": "khris@gmail.com",
+      "Mobile": "9685744152",
+      "Salary": "33500"
+    },
+    {
+      "firstName": "Ruturaj",
+      "lastName": "Gaiykwad",
+      "Email": "rutu@gmail.com",
+      "Mobile": "9663322114",
+      "Salary": "36500",
+      "id": 48
+    }
+  ],
+  "Users": [
+    {
+      "firstname": "John",
+      "lastname": "cenaaaa",
+      "email": "john@gmail.com",
+      "mobile": 9852147835,
+      "id": 4
+    },
+    {
+      "firstname": "harry G",
+      "lastname": "porter",
+      "email": "harry@gmail.com",
+      "mobile": 8754213265,
+      "id": 5
+    },
+    {
+      "firstname": "Jignesh gg",
+      "lastname": "Mehata",
+      "email": "jignesh@gmail.com",
+      "mobile": 9897643165,
+      "id": 6
+    },
+    {
+      "firstname": "wetwg",
+      "lastname": "ewfrwe",
+      "email": "ewfws",
+      "mobile": 6456464648,
+      "id": 7
+    },
+    {
+      "firstname": "efaerg",
+      "lastname": "rege",
+      "email": "ergerh",
+      "mobile": 534675,
+      "id": 8
+    },
+    {
+      "firstname": "efaerg",
+      "lastname": "rege",
+      "email": "ergerh",
+      "mobile": 534675,
+      "id": 9
+    }
+  ],
+  "SignupUsers": [
+    {
+      "firstName": "Amar",
+      "lastName": "Jagdale",
+      "email": "amar@gmail.com",
+      "mobile": 8805310272,
+      "password": "Amar@123",
+      "id": 1
+    },
+    {
+      "firstName": "Prathmesh",
+      "lastName": "Gadhave",
+      "email": "prathmesh@yahoo.com",
+      "mobile": 85787548785,
+      "password": "prathmesh@999",
+      "id": 2
+    },
+    {
+      "firstName": "Akshay",
+      "lastName": "Chougule",
+      "email": "ak@gmail.com",
+      "mobile": 785852587,
+      "password": "ak@999",
+      "id": 3
+    },
+    {
+      "firstName": "Ravindra ",
+      "lastName": "Jadeja",
+      "email": "ravi@gmail.com",
+      "mobile": 7845123265,
+      "password": "Ravi@123",
+      "id": 4
+    },
+    {
+      "firstName": "Akash",
+      "lastName": "Kundu",
+      "email": "aksh@gmail.com",
+      "mobile": 8787878787,
+      "password": "Akash@123",
+      "id": 6
+    },
+    {
+      "firstName": "Ravindra ",
+      "lastName": "Jadeja",
+      "email": "amar@gmail.com",
+      "mobile": "8805310274",
+      "password": "oi8uy87",
+      "id": 7
+    },
+    {
+      "firstName": "",
+      "lastName": "undu",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "firstName": "Shubham",
+      "lastName": "Jagdale",
+      "email": "sh@gmail.com",
+      "mobile": "7878787878",
+      "password": "Shubham@123",
+      "id": 9
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "firstName": "Davin",
+      "lastName": "Bravo",
+      "email": "bravo@gmail.com",
+      "mobile": 7805310272,
+      "password": "Bravo@123",
+      "id": 11
+    },
+    {
+      "firstName": "shardul",
+      "lastName": "Thakur",
+      "email": "shardul@gmail.com",
+      "mobile": 9905310272,
+      "password": "Shardul",
+      "id": 12
+    },
+    {
+      "firstName": "Ruturaj",
+      "lastName": "Gaiykwad",
+      "email": "rutu@gmail.com",
+      "mobile": 8798655454,
+      "password": "rutu@123",
+      "id": 13
+    },
+    {
+      "firstName": "Ishan",
+      "lastName": "kishan",
+      "email": "ishan@gmail.com",
+      "mobile": 7845122356,
+      "password": "",
+      "id": 14
+    },
+    {
+      "firstName": "akash",
+      "lastName": "kundu",
+      "email": "ak@gmail.com",
+      "mobile": 7845123265,
+      "password": "",
+      "id": 15
+    },
+    {
+      "firstName": "fghfhf",
+      "lastName": "sadffs",
+      "email": "dsfa@gmail.com",
+      "mobile": 8754983572,
+      "password": "kjh@123",
+      "id": 16
+    },
+    {
+      "firstName": "sam",
+      "lastName": "john",
+      "email": "sam@gmail.com",
+      "mobile": "9663524187",
+      "password": "sam@123",
+      "id": 17
+    },
+    {
+      "firstName": "sam",
+      "lastName": "john",
+      "email": "sam@gmail.com",
+      "mobile": "9663524187",
+      "password": "sam@123",
+      "id": 18
+    },
+    {
+      "firstName": "James",
+      "lastName": "Bond",
+      "email": "james@yahoo.com",
+      "mobile": "7896325412",
+      "password": "James@123",
+      "id": 19
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,143 @@
+<div class="jumbotron big-banner">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <div class="text-center">
+            <h5>Sign Up</h5>
+            <h6>Register Youself</h6>
+          </div>
+          <form class="shadow-lg p-4">
+            <form [formGroup]="signupForms" (ngSubmit)="signUp()">
+              <div class="mb-3">
+                <label for="exampleInputFirstName1" class="font-weight-bold">First Name</label>
+                <input formControlName="firstName" type="text" class="form-control" id="exampleInputFirstName1">
+                <!-- <small *ngIf="signupForms.get('firstName')?.invalid && signupForms.get('firstName')?.touched" class="text-danger">First Name is Required</small> -->
+                <span style="color:red"
+                  *ngIf="signupForms.controls['firstName'].invalid &&signupForms.controls['firstName']?.touched">First
+                  Name Required</span>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputLastName1" class="font-weight-bold">Last Name</label>
+                <input formControlName="lastName" type="text" class="form-control" id="exampleInputLastName1">
+                <!-- <small *ngIf="signupForms.get('lastName')?.invalid && signupForms.get('lastName')?.touched" class="text-danger">Last Name is Required</small> -->
+                <span style="color:red"
+                  *ngIf="signupForms.controls['lastName'].invalid &&signupForms.controls['lastName']?.touched">Last
+                  Name Required</span>
+              </div>
+
+              <!-- <div class="mb-3">
+                <label for="exampleInputUserName1" class="font-weight-bold">UserName</label>
+                <input formControlName="userName" type="text" class="form-control" id="exampleInputUserName1">
+                <span style="color:red"
+                  *ngIf="signupForms.controls['userName'].invalid &&signupForms.controls['userName']?.touched">User Name
+                  Required</span>
+                </div> -->
+                  <!-- <div *ngIf="signupForms.controls['userName'].invalid('usernameAlreadyTaken')">First Name is required</div> -->
+                
+                <!-- <div class="invalid-feedback" *ngIf="signupForms.get('userName').hasError('usernameAlreadyTaken')">
+                              User Name is Already Taken......
+                            </div> -->
+              
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+                <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1">
+                <!-- <small *ngIf="signupForms.get('email')?.invalid && signupForms.get('email')?.touched" class="text-danger">Email is Required</small> -->
+                <span style="color:red"
+                  *ngIf="signupForms.controls['email'].invalid && signupForms.controls['email']?.touched && !signupForms.get('email')?.hasError('emailAlreadyTaken')">Email address
+                  Required</span>
+
+                  <div class="invalid-feeback">
+                    <span style="color:red" *ngIf="signupForms.get('email')?.hasError('emailAlreadyTaken')">Email Already Exist</span>
+                  </div> 
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputMobile1" class="font-weight-bold">Mobile Number</label>
+                <input formControlName="mobile" type="text" class="form-control" id="exampleInputMobile1">
+                <!-- <small *ngIf="signupForms.get('mobile')?.invalid && signupForms.get('mobile')?.touched" class="text-danger">Mobile Number is required</small> -->
+                <span style="color:red"
+                  *ngIf="signupForms.controls['mobile'].invalid && signupForms.controls['mobile']?.touched && !signupForms.get('mobile')?.hasError('isNumbervalid')">Mobile
+                  Number Required</span>     
+                  
+                  <div class="invalid-feeback">
+                    <span style="color:red" *ngIf="signupForms.get('mobile')?.hasError('isNumbervalid')">Please Enter Ten Digit Mobile Number</span>
+                  </div>                                
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="font-weight-bold">Password</label>
+                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                <!-- <small *ngIf="signupForms.get('password')?.invalid && signupForms.get('password')?.touched" class="text-danger">Password is Required</small> -->
+                <span style="color:red"
+                  *ngIf="signupForms.controls['password'].invalid && signupForms.controls['password']?.touched">Password
+                  Required</span>
+              </div>
+              <button type="submit" class="btn btn-outline-success btn-block mt-3 font-weight-bold"
+                [disabled]="!!signupForms.invalid">Signup</button>
+            </form>
+            <small><a class="font-weight-bold" style="color: rgb(3, 2, 2);margin-top: 10px;"
+                routerLink="/auth/login-template">Already Registered ? Click Here to Login ....</a></small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container vh-50">
+  <div class="row justify-content-center h-50">
+    <div class="card my-auto shadow">
+      <div class="card-body px-2">
+        <div class="text-center">
+          <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+         </div>
+        <div class="text-center">
+          <h5>Welcome</h5>
+        </div>
+        <b><p style="color: rgb(9, 18, 24); text-align: center;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New User Sign Up Here
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></b>
+        <form [formGroup]="signupForms" (ngSubmit)="signUp()">
+          <div class="form-group">
+            <input type="text" id="firstName" placeholder="First Name" class="form-control" formControlName="firstName"
+              name="First Name" />
+              <span style="color:red" *ngIf="!signupForms.controls['firstName'].valid &&signupForms.controls['firstName']?.touched">First Name Required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="lastName" placeholder="Last Name" class="form-control" formControlName="lastName"
+              name="Last Name" />
+              <span style="color:red" *ngIf="!signupForms.controls['lastName'].valid &&signupForms.controls['lastName']?.touched">Last Name Required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" class="form-control" formControlName="email"
+              name="email" />
+              <span style="color:red" *ngIf="!signupForms.controls['email'].valid &&signupForms.controls['email']?.touched">Email Address Required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" id="mobile" placeholder="Mobile Number" class="form-control" formControlName="mobile"
+              name="Mobile Number" />
+              <span style="color:red" *ngIf="!signupForms.controls['mobile'].valid &&signupForms.controls['mobile']?.touched">Mobile Number Required</span>
+          </div>
+
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Password" class="form-control" formControlName="password"
+              name="password" />
+              <span style="color:red" *ngIf="!signupForms.controls['password'].valid &&signupForms.controls['password']?.touched">Password Required</span>
+          </div>
+          <input type="submit" class="btn btn-primary w-100" value="Sign Up" name="Sign Up" [disabled]="!signupForms.valid">
+        </form>
+        <div class="card-footer text-right">
+          <small><a  style="color: rgb(34, 64, 201);margin-top: 10px;" routerLink="/login">Already Registered ? Click Here to Login...</a>
+           </small>
+         </div>
+      </div>
+     
+    </div>
+  </div>
+</div> -->

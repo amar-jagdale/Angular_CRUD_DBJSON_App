@@ -1,0 +1,36 @@
+.card{
+    opacity:0.8;
+     margin-top: 20vh;
+     display: flex;
+     }
+ 
+  .big-banner{
+      height: 100vh;
+     padding-top: 70px;
+     opacity: 0.9;
+     background-image: url('../../assets/Images/city.jpg');
+     background-repeat: no-repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;  
+     margin-bottom: 0%;
+   
+ }
+ input.ng-invalid.ng-touched
+ {
+     border: 1px solid red;
+     
+ }
+ input.ng-valid.ng-touched
+ {
+     border-left: 5px solid green;
+     border: 1px solid rgb(4, 110, 48);
+
+ }
+ .error
+ {
+     color:red
+ }
+ 
+ 

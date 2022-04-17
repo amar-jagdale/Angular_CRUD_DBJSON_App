@@ -1,0 +1,34 @@
+<!-- <p>login-template works!</p> -->
+<div class="jumbotron big-banner">
+    <div class="container"> 
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="card" >
+                    <div class="text-center">
+                        <h3>Login</h3>
+                        <h6>Please Enter Email & Password</h6>
+                        <!-- <i class="fa fa-key icon"></i> -->
+                    </div>
+                    <form class="shadow-lg p-4">                
+                        <form #form="ngForm"(ngSubmit)="onlogin(form)">
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+                              <input type="email" class="form-control" name='email' id="email" ngModel required email #email="ngModel">
+                               <!-- <span *ngIf="!signupForm.controls['email'].valid &&signupForm.controls['email']?.touched">Email Required</span>   -->
+                               <span style="color: red;" class="help-block" *ngIf="!email.valid && email.touched">Email Required</span>
+                            </div>
+                            <div class="mb-3 ">
+                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                              <input type="password" class="form-control" name='password' id="password" ngModel required password #password="ngModel">
+                              <!-- <span style="color: red" *ngIf="!signupForm.controls['password'].valid && signupForm.controls['password']?.touched">Password is Required</span>   -->
+                              <span style="color: red;" class="help-block" *ngIf="!password.valid && password.touched">Password Required</span>
+                            </div>
+                            <button  type="submit"  class="btn btn-outline-success btn-block mt-3 font-weight-bold shadow-sm" [disabled]="form.invalid">Login</button>
+                        </form>
+                      <small><a class="font-weight-bold" style="color: rgb(5, 4, 4);margin-top: 5px;" routerLink="/auth/signup">New User ? Click Here to Sign Up...</a></small>
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
